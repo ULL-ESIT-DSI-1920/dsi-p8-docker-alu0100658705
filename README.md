@@ -6,8 +6,22 @@
 
 1. **Instalación de Docker**
 
-   | Información del sistema: |                        |
-   | ------------------------ | ---------------------- |
-   | Sistema Operativo        | Ubuntu 18.04.4 LTS     |
-   | Kernel                   | Linux 5.3.0-51-generic |
-   | Arquitectura             | x86-64                 |
+| Información del sistema: |                        |
+| ------------------------ | ---------------------- |
+| Sistema Operativo        | Ubuntu 18.04.4 LTS     |
+| Kernel                   | Linux 5.3.0-51-generic |
+| Arquitectura             | x86-64                 |
+
+a. Pasos previos:
+
+    Desisntalar los siguientes paquetes en caso de estar previamente instalados:
+
+    - docker
+    - docker-engine
+    - docker.io
+    - containerd
+    - runc
+
+    Actualizar los repositorios del sistema: <code> apt-get update </code>
+
+b. Instalación de dependencias para Docker:
