@@ -12,16 +12,16 @@
 | Kernel                   | Linux 5.3.0-51-generic |
 | Arquitectura             | x86-64                 |
 
-a. Pasos previos:
+    a. Pasos previos:
 
-    Desisntalar los siguientes paquetes en caso de estar previamente instalados:
+        Desisntalar los siguientes paquetes en caso de estar previamente instalados:
 
-    - docker
-    - docker-engine
-    - docker.io
-    - containerd
-    - runc
+        - docker
+        - docker-engine
+        - docker.io
+        - containerd
+        - runc
 
-    Actualizar los repositorios del sistema: <code> apt-get update </code>
+        Actualizar los repositorios del sistema: *sudo apt-get update*
 
-b. Instalación de dependencias para Docker:
+    b. Instalación de dependencias para Docker:
