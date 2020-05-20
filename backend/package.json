@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend prct08",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-DSI-1920/dsi-p8-docker-alu0100658705.git"
+  },
+  "author": "Pablo Beth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-DSI-1920/dsi-p8-docker-alu0100658705/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-DSI-1920/dsi-p8-docker-alu0100658705#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

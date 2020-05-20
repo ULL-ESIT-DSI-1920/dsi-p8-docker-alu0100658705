@@ -1,0 +1,15 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	background-color: white;
+	grid-gap: 12px 12px;
+}
+
+.carta {
+	border-style: solid;
+	border-color: gold;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 6px 6px 5px black;
+	text-shadow: 0 0 5px grey;
+}
