@@ -110,9 +110,57 @@ Una vez realizadas todas las configuraciones, la estrcutura que deberíamos tene
 
 #### 3) Creación del frontend
 
-#### 6) Docker Compose
+Para la parte del frontend se lee la información desde el contenedor de Node y se crea una estructura de cartas en el DOM con los datos extraidos del fichero JSON:
 
-    a. Instalación de Docker Compose
+1. Para empezar instalamos Parcel y generamos la estructura de directorios adecuada para este nuevo contenedor.
+
+2. En el archivo _index.html_ definiremos dos elementos **<div>** que alojaran las peticiones realizadas desde el arvhico js.
+
+3. En cuanto a los ficheros JS, se han definido dos; el primero, una clase _Heroe_ que contendrá la información para cada personaje definifo en el JSON:
+
+![cp11](images/cap11.png)
+
+El segundo, el fichero _index.js_, donde se realizan los fetch,y, mediante el uso de promesas, desde la API de Node se recupera la información para ser implementada en el _index.html_:
+
+![cp12](images/cap12.png)
+
+Mediante la información que se obtiene, se va iterando y, para cada uno de los elementos del JSON, se instancia la clase _Heroe_, creando un nuevo objeto que se añade a una array. Finalmente, para cada uno de los elementos del array se define un elemento _div_ con nombre de clase "carta", que contendrá la información del héroe en cuestión:
+
+![cp13](images/cap13.png)
+
+4. Se define un archivo _index.css_ similar al empleado en la práctica 4 de la asignatura.
+
+5. Configuramos el fichero del servidor _Nginx_:
+
+![cp14](images/cap14.png)
+
+Estructura del directorio del frontend:
+
+![cp15](images/cap15.png)
+
+#### 4) Dockerizar la aplicación Node:
+
+Una vez tenemos generados los ficheros necesarios y configurado el servidor _Nginx_, debemos definir el _Dockerfile_, así como el fichero _.dockerignore_ y el script _run.sh_.
+
+Contenido del Dockerfile:
+
+![cp15](images/cap16.png)
+
+- En la primera fase tomamos una imagen de node (la misma que para el caso del backend), se copian los archivos del proyecto, se instalan las dependencias y se genera la carpeta _dist_ con el proyecto.
+
+- En la segunda fase tomamos una imagen de _Nginx_, tomamos la configuración que hemos definido anteriormente, le pasamos el build del paso anterior y arrancamos el servidor con <code> CMD ["nginx", "-g", "daemon off;"] </code>
+
+El contenido del _.dockerignore_ será igual que en el caso anterior, así como el del script _run.sh_.
+
+Comprobamos su correcta ejecución:
+
+![cp15](images/cap17.png)
+
+#### 5) Docker Compose
+
+Una vez creados los contenedores anteriores se deberá hacer uso de Docker Compose para unirlos.
+
+En primer lugar instalamos la utilidad:
 
     Ejecutamos los siguientes comandos:
 
@@ -125,3 +173,15 @@ Una vez realizadas todas las configuraciones, la estrcutura que deberíamos tene
     Comprobamos que la instalación se he realizado correctamente:
 
 ![cp10](images/cap10.png)
+
+A continuación, creamos un fichero _docker-compose.yml_, donde definimos dos servicios (uno para node y otro para nginx), definimos la ruta donde se encuentran los Dockerfiles de los contenedores, le asignamos un nombre a cada uno de ellos y los unimos mediante una red:
+
+![cp18](images/cap18.png)
+
+Una vex definido el fichero, realizamos la ejecución de los comandos <code> docker-compose build </code> y <code> docker-compose up </code> definimos en _run.sh_, veamos la correcta ejecución del comando:
+
+![cp19](images/cap19.png)
+
+Y el resultado final de la práctica:
+
+![cp20](images/cap20.png)
