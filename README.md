@@ -104,7 +104,7 @@ Realizamos las siguientes comprobaciones:
 
 - Para agilizar el proceso, podemos añadir los anteriores comandos a un fichero _run.js_
 
-Una vez realizadas todas las configuraciones, la estrcutura que deberíamos tener es la siguiente:
+Una vez realizadas todas las configuraciones, la estructura que deberíamos tener es la siguiente:
 
 ![cp09](images/cap09.png)
 
@@ -114,9 +114,9 @@ Para la parte del frontend se lee la información desde el contenedor de Node y 
 
 1. Para empezar instalamos Parcel y generamos la estructura de directorios adecuada para este nuevo contenedor.
 
-2. En el archivo _index.html_ definiremos dos elementos **<div>** que alojaran las peticiones realizadas desde el arvhico js.
+2. En el archivo _index.html_ definiremos dos elementos _<div>_ que alojaran las peticiones realizadas desde el arvhico js.
 
-3. En cuanto a los ficheros JS, se han definido dos; el primero, una clase _Heroe_ que contendrá la información para cada personaje definifo en el JSON:
+3. En cuanto a los ficheros JS, se han definido dos; el primero, una clase _Heroe_ que contendrá la información definida para cada personaje en el JSON:
 
 ![cp11](images/cap11.png)
 
@@ -178,7 +178,7 @@ A continuación, creamos un fichero _docker-compose.yml_, donde definimos dos se
 
 ![cp18](images/cap18.png)
 
-Una vex definido el fichero, realizamos la ejecución de los comandos <code> docker-compose build </code> y <code> docker-compose up </code> definimos en _run.sh_, veamos la correcta ejecución del comando:
+Una vez completado el fichero, realizamos la ejecución de los comandos <code> docker-compose build </code> y <code> docker-compose up </code> definimos en _run.sh_, veamos la correcta ejecución del comando:
 
 ![cp19](images/cap19.png)
 
