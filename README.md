@@ -120,7 +120,7 @@ Para la parte del frontend se lee la información desde el contenedor de Node y 
 
 ![cp11](images/cap11.png)
 
-El segundo, el fichero _index.js_, donde se realizan los fetch,y, mediante el uso de promesas, desde la API de Node se recupera la información para ser implementada en el _index.html_:
+El segundo, el fichero _index.js_, donde se realizan los fetch, y, mediante el uso de promesas, desde la API de Node se recupera la información para ser implementada en el _index.html_:
 
 ![cp12](images/cap12.png)
 
