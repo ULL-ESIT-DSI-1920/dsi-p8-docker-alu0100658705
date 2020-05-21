@@ -112,14 +112,14 @@ Una vez realizadas todas las configuraciones, la estrcutura que deberíamos tene
 
 #### 6) Docker Compose
 
-1. **Instalación de Docker Compose**
+    a. Instalación de Docker Compose
 
-Ejecutamos los siguientes comandos:
+    Ejecutamos los siguientes comandos:
 
-- <code> sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-\$(uname -m)" -o /usr/local/bin/docker-compose </code>
+    - sudo curl -L "https://github.com/docker/compose/releases/download/1.25.5/docker-compose-$(uname -s)-\$(uname -m)" -o /usr/local/bin/docker-compose
 
-- <code> sudo chmod +x /usr/local/bin/docker-compose </code>
+    - sudo chmod +x /usr/local/bin/docker-compose
 
-Comprobamos que la instalación se he realizado correctamente:
+    Comprobamos que la instalación se he realizado correctamente:
 
 ![cp10](images/cap10.png)
