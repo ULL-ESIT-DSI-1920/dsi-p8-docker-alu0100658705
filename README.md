@@ -114,7 +114,7 @@ Para la parte del frontend se lee la información desde el contenedor de Node y 
 
 1. Para empezar instalamos Parcel y generamos la estructura de directorios adecuada para este nuevo contenedor.
 
-2. En el archivo _index.html_ definiremos dos elementos _<div>_ que alojaran las peticiones realizadas desde el arvhico js.
+2. En el archivo _index.html_ definiremos dos elementos _div_ que alojaran las peticiones realizadas desde el arvhico js.
 
 3. En cuanto a los ficheros JS, se han definido dos; el primero, una clase _Heroe_ que contendrá la información definida para cada personaje en el JSON:
 
